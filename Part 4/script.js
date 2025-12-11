@@ -30,3 +30,12 @@ let movies = [
 
 console.log("Q4.2 - Movies array (unsorted by ID):");
 console.log(movies);
+
+// Sort the movies array by Movie ID in ascending order
+
+movies.sort(function(a, b) {
+    return a.id - b.id;
+});
+
+console.log("Q4.3 - Movies array sorted by ID (ascending):");
+console.log(movies);
