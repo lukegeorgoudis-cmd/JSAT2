@@ -39,3 +39,24 @@ movies.sort(function(a, b) {
 
 console.log("Q4.3 - Movies array sorted by ID (ascending):");
 console.log(movies);
+
+// Sequential search for a movie by ID
+
+function searchMovieById(movieArray, targetId) {
+    for (let i = 0; i < movieArray.length; i++) {
+        if (movieArray[i].id === targetId) {
+            return movieArray[i];
+        }
+    }
+    return null;
+}
+
+console.log("Q4.4 - Search tests:");
+
+// Target ID found
+let foundMovie = searchMovieById(movies, 305);
+console.log("Search for ID 305 (should be found):", foundMovie);
+
+// Target ID not found
+let notFoundMovie = searchMovieById(movies, 999);
+console.log("Search for ID 999 (should be null):", notFoundMovie);
